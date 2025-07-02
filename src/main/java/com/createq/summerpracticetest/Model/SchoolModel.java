@@ -1,4 +1,4 @@
-package com.createq.summerpracticetest.Model;
+package com.createq.summerpracticetest.model;
 
 import java.util.List;
 

@@ -25,6 +25,6 @@ public class DefaultStudentService implements StudentService {
     @Override
     public List<StudentModel> getAll() {
 
-        return studentRepository.getAll();
+        return studentRepository.findAll();
     }
 }

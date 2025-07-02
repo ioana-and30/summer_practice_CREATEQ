@@ -22,8 +22,7 @@ public class DefaultSchoolService implements SchoolService {
         return schoolRepository;
     }
 
-    @Override
     public List<SchoolModel> getAll() {
-        return schoolRepository.getAll();
+        return schoolRepository.findAll();
     }
 }
