@@ -4,6 +4,7 @@ import com.createq.summerpracticetest.dto.SchoolDTO;
 import com.createq.summerpracticetest.dto.StudentDTO;
 import com.createq.summerpracticetest.model.SchoolModel;
 import com.createq.summerpracticetest.model.StudentModel;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -13,7 +14,13 @@ import java.util.stream.Collectors;
 @Component
 public class SchoolConverter {
 
-    private final StudentConverter studentConverter = new StudentConverter();
+    @Autowired
+    private final StudentConverter studentConverter;
+
+    public SchoolConverter(StudentConverter studentConverter) {
+        this.studentConverter = studentConverter;
+    }
+
     public SchoolDTO convert(SchoolModel schoolModel) {
         SchoolDTO schoolDTO = new SchoolDTO();
 
