@@ -1,18 +1,27 @@
 package com.createq.summerpracticetest.model;
 
+import com.createq.summerpracticetest.dto.StudentDTO;
+import jakarta.persistence.*;
+
 import java.util.List;
 
 public class SchoolModel {
 
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column()
     private String name;
+
+    @OneToMany(mappedBy = "school_id")
     private List<StudentModel> students;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id=id;
     }
 

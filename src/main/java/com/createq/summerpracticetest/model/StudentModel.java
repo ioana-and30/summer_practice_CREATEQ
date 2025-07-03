@@ -16,7 +16,7 @@ public class StudentModel {
     private int age;
 
     @ManyToOne
-    @JoinColumn(name="school_id")
+    @JoinColumn(name = "school_id")
     private SchoolModel school;
 
     public String getName() {
