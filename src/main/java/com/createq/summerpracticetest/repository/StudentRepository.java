@@ -1,10 +1,10 @@
-package com.createq.summerpracticetest.Repository;
+package com.createq.summerpracticetest.repository;
 
-import com.createq.summerpracticetest.Model.StudentModel;
+import com.createq.summerpracticetest.model.StudentModel;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface StudentRepository {
+public interface StudentRepository extends JpaRepository<StudentModel, Long> {
 
-    public List<StudentModel> getAll();
 }
