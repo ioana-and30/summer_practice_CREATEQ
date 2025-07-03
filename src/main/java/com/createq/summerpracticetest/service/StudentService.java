@@ -1,6 +1,6 @@
-package com.createq.summerpracticetest.service;
+package com.createq.summerpracticetest.Service;
 
-import com.createq.summerpracticetest.model.StudentModel;
+import com.createq.summerpracticetest.Model.StudentModel;
 
 import java.util.List;
 
