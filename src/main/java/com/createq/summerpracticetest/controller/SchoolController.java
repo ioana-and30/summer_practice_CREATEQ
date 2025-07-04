@@ -17,13 +17,13 @@ public class SchoolController {
         this.schoolFacade = schoolFacade;
     }
 
-    @GetMapping("schools")
+    @GetMapping("allSchools")
     public String getAll(Model model){
 
         schoolFacade.getAll();
-        model.addAttribute("schools", schoolFacade.getAll());
+        model.addAttribute("allSchools", schoolFacade.getAll());
 
-        return "schools";
+        return "allSchools";
     }
 }
 

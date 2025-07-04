@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+@Entity
 public class SchoolModel {
 
     @Id
@@ -14,7 +15,7 @@ public class SchoolModel {
     @Column()
     private String name;
 
-    @OneToMany(mappedBy = "school_id")
+    @OneToMany(mappedBy = "school")
     private List<StudentModel> students;
 
     public Long getId() {

@@ -16,12 +16,12 @@ public class StudentController {
         this.studentFacade = studentFacade;
     }
 
-    @GetMapping("students")
+    @GetMapping("allStudent")
     public String getAll(Model model){
 
         studentFacade.getAll();
-        model.addAttribute("students", studentFacade.getAll());
+        model.addAttribute("allStudent", studentFacade.getAll());
 
-        return "students";
+        return "allStudent";
     }
 }
